@@ -2,6 +2,16 @@
 
 A unified visualization and management dashboard for multiple Cloudflare R2 storage accounts.
 
+## 🚀 Live Demo
+
+Try the dashboard now: **[https://r2.thesignalwise.com/](https://r2.thesignalwise.com/)**
+
+**Demo Credentials:**
+- Email: `demo@thesignalwise.com`
+- Password: `demo`
+
+*Experience the full functionality with sample data and explore all features in a live environment.*
+
 ## Features
 
 - 🗂️ **Multi-Account Management**: Manage multiple Cloudflare R2 accounts from one dashboard
@@ -32,6 +42,41 @@ A unified visualization and management dashboard for multiple Cloudflare R2 stor
    ```bash
    wrangler deploy
    ```
+
+## 🔑 Getting R2 API Token
+
+To add R2 accounts to your dashboard, you need to generate API tokens with proper permissions:
+
+### Step 1: Access Cloudflare API Tokens
+Visit: `https://dash.cloudflare.com/<YOUR_CF_ACCOUNT_ID>/api-tokens`
+
+Replace `<YOUR_CF_ACCOUNT_ID>` with your actual Cloudflare Account ID.
+
+### Step 2: Create New Token
+1. Click "**Create Token**"
+2. Select "**Custom token**"
+3. Configure the following permissions:
+
+### Step 3: Set Required Permissions
+Configure your token with **read-only** permissions for:
+
+| Permission | Resource | Access |
+|------------|----------|--------|
+| **Account** | Analytics | Read |
+| **Workers R2** | Data Catalog | Read |
+| **Workers R2** | Storage | Read |
+
+### Step 4: Configure Account Resources
+- **Account Resources**: Include specific accounts you want to monitor
+- **Zone Resources**: Not required for R2 dashboard
+
+### Step 5: Complete Token Creation
+1. Review your configuration
+2. Click "**Continue to summary**"
+3. Click "**Create Token**"
+4. **Copy and save** the generated token securely
+
+⚠️ **Security Note**: Store your API tokens securely and never share them publicly. The dashboard only requires read-only permissions for monitoring and analytics.
 
 ## Development
 
