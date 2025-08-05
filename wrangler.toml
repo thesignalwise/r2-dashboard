@@ -1,0 +1,41 @@
+name = "r2-dashboard"
+main = "src/index.tsx"
+compatibility_date = "2025-08-05"
+compatibility_flags = ["nodejs_compat"]
+
+# 生产环境变量
+[vars]
+API_VERSION = "v1"
+ENVIRONMENT = "production"
+CRON_SECRET = "please-change-this-secret-key"
+
+# 生产环境KV命名空间（带项目前缀）
+[[kv_namespaces]]
+binding = "USER_DATA"
+id = "595fa6f7fbb543c488973ae31ef69d53"
+
+[[kv_namespaces]]
+binding = "CACHE_DATA"
+id = "5941e00492c043e787978890cac43cb0"
+
+# 开发环境配置（本地开发时使用）
+[env.development.vars]
+ENVIRONMENT = "development"
+
+[[env.development.kv_namespaces]]
+binding = "USER_DATA"
+id = "dev_r2dashboard_userdata"
+preview_id = "dev_r2dashboard_userdata"
+
+[[env.development.kv_namespaces]]
+binding = "CACHE_DATA"
+id = "dev_r2dashboard_cachedata"
+preview_id = "dev_r2dashboard_cachedata"
+
+# 开发服务器设置
+[dev]
+port = 8787
+
+# Cron Triggers - 定时执行任务
+[triggers]
+crons = ["0 0 * * *"]  # 每天0点执行
