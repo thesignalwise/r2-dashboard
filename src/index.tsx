@@ -1606,7 +1606,23 @@ app.get('/', (c) => {
                   <div className="max-w-sm mx-auto w-full">
                     <div className="text-center mb-8">
                       <h2 className="text-2xl font-bold text-gray-800 mb-2">Welcome Back</h2>
-                      <p className="text-gray-600">Sign in to manage your R2 storage</p>
+                      <p className="text-gray-600">Sign in to monitor your R2 storage</p>
+                      <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                        <p className="text-sm text-blue-700 mb-2">
+                          <strong>📊 Read-Only Monitoring Version</strong> - Provides R2 storage bucket monitoring and data visualization
+                        </p>
+                        <p className="text-xs text-blue-600 mb-2">
+                          Need full-featured storage management?
+                        </p>
+                        <a
+                          href="https://r2dashboard.thesignalwise.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-blue-700 underline hover:text-blue-800 font-medium"
+                        >
+                          Try R2Dashboard Chrome Extension 🚀
+                        </a>
+                      </div>
                     </div>
                     
                     <form onSubmit={handleAuth} className="space-y-6">

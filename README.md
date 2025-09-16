@@ -10,7 +10,10 @@ Try the dashboard now: **[https://r2.thesignalwise.com/](https://r2.thesignalwis
 - Email: `demo@thesignalwise.com`
 - Password: `demo`
 
-*Experience the full functionality with sample data and explore all features in a live environment.*
+*This version provides read-only monitoring of R2 storage bucket information with sample data and core visualization features.*
+
+**Looking for full-featured Cloudflare R2 storage management?**
+Check out our comprehensive **R2Dashboard Chrome Extension**: **[https://r2dashboard.thesignalwise.com](https://r2dashboard.thesignalwise.com)**
 
 ## Features
 
